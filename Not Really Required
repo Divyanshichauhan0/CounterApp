@@ -1,0 +1,1 @@
+As this is a small, feasible and first project made by me so i didn't really added the real database to it. While building i used db from replit if you want to use the actual database you can either use sqlite3 or any other database or may also use session module that will remember the count of the number per session.
