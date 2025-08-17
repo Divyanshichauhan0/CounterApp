@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pretty Little Counter la la la..</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            background-color: black;
+        }
+        .number{
+            display:flex;
+            justify-content: center;
+            color:black;
+            font-size:80px;
+        }
+        #btn{
+            display: flex;
+            flex-direction: row;
+            gap:50px;
+            justify-content: space-around;
+        }
+        #btn1, #btn2 {
+            border: 2px solid black;
+            border-radius: 8px;
+            padding: 10px 20px;
+            margin: 5px;
+            display: inline-block;
+            cursor: pointer;
+            background-color: #919abf;
+            transition: all 0.2s ease;
+        }
+        #btn1:hover, #btn2:hover {
+            background-color: #e0e0e0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        body{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap:30px;
+        }
+        #circle{
+            border: 2px black solid;
+            height: 250px;
+            width:250px;
+            border-radius: 50%;
+             padding: 10px 20px;
+            margin: 5px;
+            display: inline-block;
+            cursor: pointer;
+            background-color: #917abf;
+        }
+        button{
+            background-color: #987abf;
+        }
+    </style>
+</head>
+<body>
 
+    <div id="circle">
+        <p class="number">{{ number }}</p>
+    </div>
+    {% if message %}
+        <p style="color: red;">{{ message }}</p>
+    {% endif %}
+    <div id="btn">
+        <form id="btn1" action="/increment" method="post">
+            <button type="submit" class="increment-btn">+</button></form>
+       <form id="btn2" action="/decrement" method="post">
+           <button type="submit" class="decrement-btn">-</button></form>
+    </div>
+</body>
+</html>
